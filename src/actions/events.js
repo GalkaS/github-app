@@ -3,7 +3,6 @@ const handleEvents = events => ({
 	payload: events,
 })
 
-
 export const fetchEvents = username => dispatch => {
     return fetch(`https://api.github.com/users/${username}/events`)
     .then(res => res.json())

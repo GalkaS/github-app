@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import Login from "./Login.js";
 import Profile from "./Profile.js";
 import './styles.css';
-import ForksList from "./ForksList"
+import ForksList from "./ForksList";
+import PullRequestList from "./PullRequestList";
 
 import { fetchEvents } from "./actions/events"
 import { fetchProfile } from "./actions/profile"
@@ -26,6 +27,7 @@ class App extends Component {
               avatar_url={this.props.profile.avatar_url}
             />
             <ForksList forks={this.props.events.filter((event) => event.type === 'ForkEvent')} />
+            <PullRequestList pullRequests={this.props.events.filter((event) => event.type === 'PullRequestEvent')} />
           </React.Fragment>
           ) : (
           <div>

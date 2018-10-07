@@ -1,28 +1,70 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from "react-redux";
+import Login from "./Login.js";
+import Profile from "./Profile.js";
+import './styles.css';
+import ForksList from "./ForksList"
+
+import { fetchEvents } from "./actions/events"
+import { fetchProfile } from "./actions/profile"
+import { handleChangeUsername, handleChangeFirstName, handleLogin } from "./actions/login";
+import { handleLogOut } from "./actions/logout";
 
 class App extends Component {
+  componentDidUpdate(prevProps) {
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          {this.props.loggedIn ? (
+          <React.Fragment>
+            <Profile
+              handleLogOut={this.props.handleLogOut}
+              login={this.props.username}
+              avatar_url={this.props.profile.avatar_url}
+            />
+            <ForksList forks={this.props.events.filter((event) => event.type === 'ForkEvent')} />
+          </React.Fragment>
+          ) : (
+          <div>
+            <p>Github App</p>
+            <img src="https://cdn.svgporn.com/logos/github-octocat.svg" alt="Octocat logo" />
+            <Login
+              handleChangeUsername={this.props.handleChangeUsername}
+              handleChangeFirstName={this.props.handleChangeFirstName}
+              handleClick={(username) => {
+                this.props.handleLogin()
+                this.props.fetchEvents(username)
+                this.props.fetchProfile(username)
+              }}
+              username={this.props.username}
+              firstName={this.props.firstName}
+            />
+          </div>
+          )}
         </header>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return state;
+};
+
+const mapDispatchToProps = {
+  handleChangeUsername,
+  handleChangeFirstName,
+  handleLogin,
+  handleLogOut,
+  fetchEvents,
+  fetchProfile,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
+

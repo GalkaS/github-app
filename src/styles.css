@@ -13,9 +13,9 @@
   color: white;
 }
 
-.App-link {
+/*.App-link {
   color: #61dafb;
-}
+}*/
 
 input {
   padding: 10px;
@@ -29,9 +29,16 @@ label {
   font-size: calc(15px + 2vmin);
 }
 
-ul {
-  padding: 0;
+li {
+  padding: 0.5px;
+  text-align: left;
+  font-size: calc(12px + 2vmin);
 }
+
+a {
+  color: #61dafb;
+}
+
 button {
   display: block;
   width: 150px;
@@ -48,8 +55,12 @@ button {
   width: 100px;
   border-radius: 50%;
 }
+.sectionTitle {
+  margin-bottom: -20px;
+}
 
-.logout {
-  font-size: calc(15px + 2vmin);
+/*.logout {
+  font-size: calc(27px + 2vmin);
   color: white;
 }
+*/

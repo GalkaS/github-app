@@ -9,7 +9,7 @@ const PullRequestList = ({pullRequests}) => (
 				<PullRequest
 				url={pullRequest.payload.pull_request.html_url}
 				title={pullRequest.payload.pull_request.title}
-				state={pullRequest.payload.pull_request.state}
+				status={pullRequest.payload.pull_request.state}
 				/>
 				))}
 		</ul>

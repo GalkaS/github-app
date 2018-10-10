@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextField =  ({ value, handleChange, label, id, name }) => (
+const TextField = ({ value, handleChange, label, id, name }) => (
   <React.Fragment>
     <label htmlFor={id}>{label}</label>
     <input
@@ -15,7 +15,6 @@ const TextField =  ({ value, handleChange, label, id, name }) => (
 
 export default TextField;
 
-
 // <TextField
 //   name="firstName"
 //   handleChange={handleChangeFirstName}
@@ -23,4 +22,4 @@ export default TextField;
 //   label="Your first name"
 //   value={firstName}
 // />
-// 
+//

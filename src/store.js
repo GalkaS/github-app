@@ -7,7 +7,7 @@ const initialState = {
   firstName: "",
   profile: {},
   forks: [],
-  pullRequests: [],
+  pullRequests: []
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -25,7 +25,7 @@ const rootReducer = (state = initialState, action) => {
     case "LOGIN":
       return {
         ...state,
-        loggedIn: true,
+        loggedIn: true
       };
     case "LOGOUT":
       return {
@@ -37,24 +37,24 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         forks: action.payload
-      }
+      };
     case "PULL_REQUESTS":
       return {
         ...state,
         pullRequests: action.payload
-      }
+      };
     case "PROFILE":
       return {
         ...state,
         profile: action.payload
-      }
+      };
     default:
       return state;
   }
 };
-  
+
 export default createStore(
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(thunk),
+  applyMiddleware(thunk)
 );

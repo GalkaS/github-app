@@ -6,7 +6,8 @@ const initialState = {
   username: "",
   firstName: "",
   profile: {},
-  events: [],
+  forks: [],
+  pullRequests: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -32,10 +33,15 @@ const rootReducer = (state = initialState, action) => {
         loggedIn: false,
         profile: {}
       };
-    case "EVENTS":
+    case "FORKS":
       return {
         ...state,
-        events: action.payload
+        forks: action.payload
+      }
+    case "PULL_REQUESTS":
+      return {
+        ...state,
+        pullRequests: action.payload
       }
     case "PROFILE":
       return {

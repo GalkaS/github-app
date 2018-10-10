@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <body className="App-header">
           {this.props.loggedIn ? (
           <React.Fragment>
             <Profile
@@ -26,8 +26,8 @@ class App extends Component {
               login={this.props.username}
               avatar_url={this.props.profile.avatar_url}
             />
-            <ForksList forks={this.props.events.filter((event) => event.type === 'ForkEvent')} />
-            <PullRequestList pullRequests={this.props.events.filter((event) => event.type === 'PullRequestEvent')} />
+            <ForksList forks={this.props.forks} />
+            <PullRequestList pullRequests={this.props.pullRequests} />
           </React.Fragment>
           ) : (
           <div>
@@ -46,7 +46,7 @@ class App extends Component {
             />
           </div>
           )}
-        </header>
+        </body>
       </div>
     );
   }

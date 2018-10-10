@@ -14,3 +14,13 @@ const TextField =  ({ value, handleChange, label, id, name }) => (
 );
 
 export default TextField;
+
+
+// <TextField
+//   name="firstName"
+//   handleChange={handleChangeFirstName}
+//   id="user-firstName"
+//   label="Your first name"
+//   value={firstName}
+// />
+// 

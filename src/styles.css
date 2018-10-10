@@ -13,10 +13,6 @@
   color: white;
 }
 
-/*.App-link {
-  color: #61dafb;
-}*/
-
 input {
   padding: 10px;
   width: 200px;
@@ -38,6 +34,9 @@ li {
 a {
   color: #61dafb;
 }
+a:hover {
+  color: gray;
+}
 
 button {
   display: block;
@@ -50,6 +49,9 @@ button {
   color: white;
   font-size: calc(12px + 2vmin);
 }
+button:hover {
+  color: gray;
+}
 
 .profile img {
   width: 100px;
@@ -57,10 +59,23 @@ button {
 }
 .sectionTitle {
   margin-bottom: -20px;
+  font-size: calc(15px + 2vmin);
+  grid-template-columns: repeat(2, 1fr);
 }
 
-/*.logout {
-  font-size: calc(27px + 2vmin);
+.hello-name {
+  font-size: calc(33px + 2vmin);
   color: white;
 }
-*/
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.cyan {
+  color: cyan;
+}

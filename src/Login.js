@@ -8,18 +8,23 @@ const Login = ({ handleChangeUsername, handleChangeFirstName, handleClick, usern
       name="username"
       handleChange={handleChangeUsername}
       id="github-username"
-      label="Username"
+      label="Enter your github username"
       value={username}
-    />
-    <TextField
-      name="firstName"
-      handleChange={handleChangeFirstName}
-      id="user-firstName"
-      label="Your first name"
-      value={firstName}
     />
     <Button value="Login" handleClick={() => handleClick(username)} />
   </div>
 );
 
 export default Login;
+
+
+
+
+// <TextField
+//   name="firstName"
+//   handleChange={handleChangeFirstName}
+//   id="user-firstName"
+//   label="Your first name"
+//   value={firstName}
+// />
+// 

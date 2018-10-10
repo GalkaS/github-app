@@ -13,6 +13,33 @@
   color: white;
 }
 
+.profile img {
+  width: 100px;
+  border-radius: 50%;
+}
+.sectionTitle {
+  margin-bottom: -20px;
+  font-size: calc(15px + 2vmin);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hello-name {
+  font-size: calc(33px + 2vmin);
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.cyan {
+  color: cyan;
+}
+
 input {
   padding: 10px;
   width: 200px;
@@ -51,31 +78,4 @@ button {
 }
 button:hover {
   color: gray;
-}
-
-.profile img {
-  width: 100px;
-  border-radius: 50%;
-}
-.sectionTitle {
-  margin-bottom: -20px;
-  font-size: calc(15px + 2vmin);
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.hello-name {
-  font-size: calc(33px + 2vmin);
-  color: white;
-}
-
-.red {
-  color: red;
-}
-
-.green {
-  color: green;
-}
-
-.cyan {
-  color: cyan;
 }

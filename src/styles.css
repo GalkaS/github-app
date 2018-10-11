@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -14,12 +11,12 @@
 }
 
 .profile img {
-  width: 100px;
+  width: 150px;
   border-radius: 50%;
 }
 .sectionTitle {
   margin-bottom: -20px;
-  font-size: calc(15px + 2vmin);
+  font-size: calc(20px + 2vmin);
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -39,7 +36,17 @@
 .cyan {
   color: cyan;
 }
-
+.no-info-message {
+  font-size: calc(12px + 2vmin);
+  margin-top: 25px;
+  font-style: italic;
+}
+.text-field {
+  margin-top: 15px;
+}
+.pull-requests-list {
+  margin-left: -60px;
+}
 input {
   padding: 10px;
   width: 200px;
@@ -69,12 +76,13 @@ button {
   display: block;
   width: 150px;
   padding: 6px;
-  background: black;
+  background: rgb(26, 24, 24);
   border: none;
   margin: 0 auto;
   margin-top: 30px;
   color: white;
   font-size: calc(12px + 2vmin);
+  border-radius: 15px;
 }
 button:hover {
   color: gray;

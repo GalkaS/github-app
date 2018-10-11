@@ -21,38 +21,36 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <body className="App-header">
-          {this.props.loggedIn ? (
-            <React.Fragment>
-              <Profile
-                handleLogOut={this.props.handleLogOut}
-                login={this.props.username}
-                avatar_url={this.props.profile.avatar_url}
-              />
-              <ForksList forks={this.props.forks} />
-              <PullRequestList pullRequests={this.props.pullRequests} />
-            </React.Fragment>
-          ) : (
-            <div>
-              <p>Github App</p>
-              <img
-                src="https://cdn.svgporn.com/logos/github-octocat.svg"
-                alt="Octocat logo"
-              />
-              <Login
-                handleChangeUsername={this.props.handleChangeUsername}
-                handleChangeFirstName={this.props.handleChangeFirstName}
-                handleClick={username => {
-                  this.props.handleLogin();
-                  this.props.fetchEvents(username);
-                  this.props.fetchProfile(username);
-                }}
-                username={this.props.username}
-                firstName={this.props.firstName}
-              />
-            </div>
-          )}
-        </body>
+        {this.props.loggedIn ? (
+          <React.Fragment>
+            <Profile
+              handleLogOut={this.props.handleLogOut}
+              login={this.props.username}
+              avatar_url={this.props.profile.avatar_url}
+            />
+            <ForksList forks={this.props.forks} />
+            <PullRequestList pullRequests={this.props.pullRequests} />
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <p>Github App</p>
+            <img
+              src="https://cdn.svgporn.com/logos/github-octocat.svg"
+              alt="Octocat logo"
+            />
+            <Login
+              handleChangeUsername={this.props.handleChangeUsername}
+              handleChangeFirstName={this.props.handleChangeFirstName}
+              handleClick={username => {
+                this.props.handleLogin();
+                this.props.fetchEvents(username);
+                this.props.fetchProfile(username);
+              }}
+              username={this.props.username}
+              firstName={this.props.firstName}
+            />
+          </React.Fragment>
+        )}
       </div>
     );
   }

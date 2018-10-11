@@ -4,7 +4,6 @@ const Fork = ({ name, originalUrl, forkUrl, forkName }) => (
   <div className="list">
     <li key={name}>
       <p>
-        {" "}
         Base repo - <a href={originalUrl}>{name}</a>
       </p>
       <p>

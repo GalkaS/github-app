@@ -9,7 +9,7 @@ const handlePullRequests = pullRequests => ({
 });
 
 export const fetchEvents = username => dispatch => {
-  return fetch(`https://api.github.com/users/${username}/events`)
+  return fetch(`https://api.github.com/users/${username}/events?per_page=100`)
     .then(res => res.json())
     .then(events => {
       // Get all the forked repos

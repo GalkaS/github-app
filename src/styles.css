@@ -41,9 +41,11 @@
   margin-top: 25px;
   font-style: italic;
 }
+
 .text-field {
   margin-top: 15px;
 }
+
 .pull-requests-list {
   margin-left: -60px;
 }
@@ -68,6 +70,7 @@ li {
 a {
   color: #61dafb;
 }
+
 a:hover {
   color: gray;
 }
@@ -84,6 +87,7 @@ button {
   font-size: calc(12px + 2vmin);
   border-radius: 15px;
 }
+
 button:hover {
   color: gray;
 }
